@@ -1,16 +1,56 @@
-# React + Vite
+# 🌟 Djillali Faraoun - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Status](https://img.shields.io/badge/Status-Active-success)
+![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38BDF8?logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer&logoColor=white)
 
-Currently, two official plugins are available:
+A modern, responsive, and animated personal portfolio built to showcase my journey, technical skills, and featured projects as a Software Engineering student at ENSTTIC.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+*   **⚡ Modern Tech Stack:** Built with React JS, Vite, and styled seamlessly using Tailwind CSS.
+*   **🎨 Smooth Animations:** Powered by `Framer Motion` for engaging entry transitions and interactive UI elements.
+*   **📱 Fully Responsive:** Optimized for both mobile devices and large desktop screens.
+*   **🚀 Project Showcases:** Highlights real-world projects such as the *Car Market Intelligence Pipeline*, complete with live links and source code repositories.
+*   **📬 Direct Connections:** Includes interactive social links (GitHub, LinkedIn, Instagram, Email).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Tech Stack
 
-## Expanding the ESLint configuration
+*   **Frontend Library:** React JS (Vite)
+*   **Styling:** Tailwind CSS
+*   **Animations:** Framer Motion
+*   **Icons:** React Icons
+*   **Deployment:** Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Project Structure
+
+    📦 portfolio
+     ┣ 📂 src
+     │  ┣ 📂 pages
+     │  │  ┗ 📜 Hero.jsx        # Main landing page & component layout
+     │  ┣ 📜 App.jsx            # Application root wrapper
+     │  ┗ 📜 main.jsx           # Entry point
+     ┣ 📜 package.json          # Dependencies and scripts
+     ┗ 📜 README.md             # Project documentation
+
+## 🚀 How to Run Locally
+
+Clone the repository and run the portfolio locally on your machine:
+
+    # Clone the repository
+    git clone git@github.com:Djilali-77/portfolio.git
+
+    # Navigate into the project directory
+    cd portfolio
+
+    # Install dependencies
+    npm install
+
+    # Start the development server
+    npm run dev
+
+The application will be available at http://localhost:5173.
+
+## 🤝 Author
+Built with ♥ and React JS by **Djillali Faraoun**.
