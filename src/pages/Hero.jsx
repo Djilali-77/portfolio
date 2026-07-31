@@ -33,15 +33,16 @@ const Hero = () => {
     },
     { 
       id: 4, 
-      title: "Design Collection", 
-      desc: "A collection of logos and business cards created using Adobe Illustrator and Photoshop.", 
-      cat: "Design" 
+      title: "CLI Stock Management System", 
+      desc: "A high-performance, memory-safe CLI application written in pure C for inventory and POS management.", 
+      cat: "C / Data Structures",
+      link: "https://github.com/Djilali-77/c-stock-management-cli"
     },
     { 
       id: 5, 
-      title: "Data Automation Bot", 
-      desc: "A Python script designed for web scraping and automated data extraction.", 
-      cat: "Python/API" 
+      title: "Design Collection", 
+      desc: "A collection of logos and business cards created using Adobe Illustrator and Photoshop.", 
+      cat: "Design" 
     },
   ];
 
