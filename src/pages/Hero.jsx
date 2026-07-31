@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
@@ -13,17 +12,17 @@ const Hero = () => {
   const projects = [
     { 
       id: 1, 
+      title: "Web Portfolio", 
+      desc: "A modern, responsive personal portfolio built with React and Tailwind CSS.", 
+      cat: "Web Dev" ,
+      githubLink: "https://github.com/Djilali-77/portfolio"
+    },
+    { 
+      id: 2, 
       title: "Car Market Intelligence", 
       desc: "An end-to-end pipeline featuring a web scraper, ML anomaly detection, price prediction model, FastAPI backend, and an interactive React dashboard.", 
       cat: "Full-Stack / ML",
       link: "https://car-market-md.vercel.app/"
-    },
-    { 
-      id: 2, 
-      title: "Web Portfolio", 
-      desc: "A modern, responsive personal portfolio built with React and Tailwind CSS.", 
-      cat: "Web Dev", 
-      githubLink: "https://github.com/Djilali-77/your-portfolio-repo-name"
     },
     { 
       id: 3, 
