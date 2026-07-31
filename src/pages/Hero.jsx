@@ -44,6 +44,13 @@ const Hero = () => {
       desc: "A collection of logos and business cards created using Adobe Illustrator and Photoshop.", 
       cat: "Design" 
     },
+    { 
+      id: 6, 
+      title: "Python POS System", 
+      desc: "A full-stack desktop checkout application built with CustomTkinter and SQLite.", 
+      cat: "Desktop App",
+      githubLink: "https://github.com/Djilali-77/Caisse-POS-"
+    },
   ];
 
   return (
