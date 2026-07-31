@@ -19,16 +19,17 @@ const Hero = () => {
     },
     { 
       id: 2, 
+      title: "3D Printing Project", 
+      desc: "An upcoming hardware project exploring 3D modeling and printing (Coming Soon).", 
+      cat: "3D/Hardware" ,
+      link: "https://morvox-lab.vercel.app"
+    },
+    { 
+      id: 3, 
       title: "Car Market Intelligence", 
       desc: "An end-to-end pipeline featuring a web scraper, ML anomaly detection, price prediction model, FastAPI backend, and an interactive React dashboard.", 
       cat: "Full-Stack / ML",
       link: "https://car-market-md.vercel.app/"
-    },
-    { 
-      id: 3, 
-      title: "Data Automation Bot", 
-      desc: "A Python script designed for web scraping and automated data extraction.", 
-      cat: "Python/API" 
     },
     { 
       id: 4, 
@@ -38,10 +39,10 @@ const Hero = () => {
     },
     { 
       id: 5, 
-      title: "3D Printing Project", 
-      desc: "An upcoming hardware project exploring 3D modeling and printing (Coming Soon).", 
-      cat: "3D/Hardware" 
-    }
+      title: "Data Automation Bot", 
+      desc: "A Python script designed for web scraping and automated data extraction.", 
+      cat: "Python/API" 
+    },
   ];
 
   return (
