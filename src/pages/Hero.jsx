@@ -64,18 +64,17 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-blue-400 font-bold tracking-widest text-sm mb-4 uppercase">
-            Software Engineering Student
+            Empowering Your Digital Vision
           </h2>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Djillali FARAOUN</span>
+            Let's Build Something <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Extraordinary</span>
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-            Student at ENSTTIC. Passionate about Web Development, Python, Design, and Artificial Intelligence. Always building and learning.
+            Hi, I'm FARAOUN Djillali. I help businesses and teams solve complex problems through high-performance web development, data automation, and intelligent design. Your goals, engineered to reality.
           </p>
-          
           <div className="flex gap-4 justify-center">
-            <a href="#projects" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer">
-              View My Work
+            <a href="#projects" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all cursor-pointer shadow-lg shadow-blue-500/30">
+              See How I Can Help
             </a>
             <a 
               href="/portfolio.html"
@@ -88,23 +87,20 @@ const Hero = () => {
         </motion.div>
       </section>
 
-      {/* ================= ABOUT SECTION ================= */}
+      {/* ================= ABOUT SECTION (Now Value-Driven) ================= */}
       <section id="about" className="py-20 px-4 max-w-4xl mx-auto scroll-mt-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-8">About <span className="text-blue-500">Me</span></h2>
+          <h2 className="text-3xl font-bold mb-8">How I Can <span className="text-blue-500">Add Value</span> to Your Work</h2>
           <div className="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 shadow-lg">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I am a student at the National Higher School of Telecommunications and ICT (ENSTTIC). 
-              Deeply passionate about technology and self-learning, my journey started with fundamentals like C and Python, 
-              and later expanded into Web Development (React, Tailwind) and Artificial Intelligence.
+              Instead of just writing code, I focus on delivering real value. Whether you need a scalable web application to reach more clients, automated data extraction to save hundreds of hours, or a strong brand identity, I bridge the gap between technical complexity and your business needs.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              I speak three languages (Arabic, French, English) and I'm always eager to learn new skills. 
-              Currently, I'm diving into the world of 3D printing and working on exciting new hardware projects.
+              Backed by an engineering background at ENSTTIC and a versatile skill set across modern web stacks, AI, and hardware (3D printing), I bring a problem-solving mindset to every project. If you have a challenge, I have the technical tools to solve it.
             </p>
           </div>
         </motion.div>
@@ -112,8 +108,7 @@ const Hero = () => {
 
       {/* ================= SKILLS SECTION ================= */}
       <section id="skills" className="py-20 px-4 max-w-6xl mx-auto scroll-mt-24">
-        <h2 className="text-3xl font-bold mb-10 text-center">My <span className="text-blue-500">Skills</span></h2>
-        
+        <h2 className="text-3xl font-bold mb-10 text-center">Tools I Use to <span className="text-blue-500">Build Your Solutions</span></h2>
         <div className="flex flex-wrap justify-center gap-4">
           {skills.map((skill, index) => (
             <motion.div
@@ -121,7 +116,7 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gray-800 border border-gray-700 rounded-full px-6 py-3 text-sm font-semibold hover:border-blue-500 hover:text-blue-400 cursor-pointer transition-all"
+              className="bg-gray-800 border border-gray-700 rounded-full px-6 py-3 text-sm font-semibold hover:border-blue-500 hover:text-blue-400 cursor-pointer transition-all shadow-sm hover:shadow-blue-500/20"
             >
               {skill}
             </motion.div>
@@ -132,8 +127,7 @@ const Hero = () => {
       {/* ================= PROJECTS SECTION ================= */}
       <section id="projects" className="py-20 px-4 bg-gray-800/50 scroll-mt-24">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-10 text-center">Featured <span className="text-purple-500">Projects</span></h2>
-          
+          <h2 className="text-3xl font-bold mb-10 text-center">Solutions & <span className="text-purple-500">Proven Results</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {projects.map((projet) => (
               <motion.div 
@@ -148,7 +142,6 @@ const Hero = () => {
                   <h3 className="text-2xl font-bold mt-4 mb-2">{projet.title}</h3>
                   <p className="text-gray-400 mb-6">{projet.desc}</p>
                 </div>
-                
                 {projet.link ? (
                   <a 
                     href={projet.link} 
@@ -156,7 +149,7 @@ const Hero = () => {
                     rel="noreferrer"
                     className="text-purple-400 hover:text-purple-300 font-medium text-sm flex items-center gap-2 self-start cursor-pointer transition-colors"
                   >
-                    Project Details →
+                    View Project Impact →
                   </a>
                 ) : projet.githubLink ? (
                   <a 
@@ -180,29 +173,27 @@ const Hero = () => {
 
       {/* ================= CONTACT FOOTER ================= */}
       <footer id="contact" className="py-12 text-center border-t border-gray-800 mt-20 scroll-mt-24">
-        <h2 className="text-2xl font-bold mb-6">Let's Connect</h2>
-        <p className="text-gray-500 mb-8">I'm currently open for new projects and internship opportunities. Feel free to reach out!</p>
-        
+        <h2 className="text-2xl font-bold mb-6">Ready to Level Up Your Next Project?</h2>
+        <p className="text-gray-500 mb-8 max-w-xl mx-auto">
+          Whether you're looking for a dedicated intern, a reliable freelancer, or just want to discuss how my technical skills can add value to your team, my inbox is always open.
+        </p>
         <div className="flex justify-center gap-8 mb-10">
           <a href="https://github.com/Djilali-77" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white text-3xl transition-transform hover:scale-110 cursor-pointer">
             <FaGithub />
           </a>
-          
           <a href="https://www.linkedin.com/in/faraoun-djillali-51217b326/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-blue-500 text-3xl transition-transform hover:scale-110 cursor-pointer">
             <FaLinkedin />
           </a>
-          
           <a href="https://www.instagram.com/morvoxlab/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-pink-500 text-3xl transition-transform hover:scale-110 cursor-pointer">
             <FaInstagram />
           </a>
-          
           <a href="mailto:faraoundjilali.fd@gmail.com" className="text-gray-400 hover:text-red-500 text-3xl transition-transform hover:scale-110 cursor-pointer">
             <FaEnvelope />
           </a>
         </div>
 
         <p className="text-gray-600 mt-10 text-sm">
-          Built with ♥ and React JS by DJILLALI.
+          Built with ♥ and React JS to drive real results.
         </p>
       </footer>
 
