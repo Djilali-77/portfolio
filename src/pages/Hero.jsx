@@ -2,22 +2,23 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
-  const skills = [
-    // Core Computer Science & Languages
-    "Python", "C", "Algorithms", "Object-Oriented Programming (OOP)", 
-    "Operating Systems", "Databases", "Data Networks",
-    
-    // Data Science, AI & Math
-    "Machine Learning", "Data Analysis", "Image Processing", 
-    "Probabilities & Statistics", "Scikit-Learn", "Web Scraping", "Playwright",
-    
-    // Web Development
-    "React JS", "Tailwind CSS", "Framer Motion", "FastAPI",
-    
-    // Hardware, Embedded Systems & Design
-    "Embedded Systems", "Arduino (Microcontrollers)", "Hardware Prototyping", 
-    "Sensors & Motors Integration", "3D Printing", 
-    "UI/UX Design", "Adobe Illustrator", "Graphic Design"
+  const skillCategories = [
+    {
+      title: "💻 Core & Languages",
+      skills: ["Python", "C", "Algorithms", "Object-Oriented Programming (OOP)", "Operating Systems", "Databases", "Data Networks"]
+    },
+    {
+      title: "🤖 Data & AI",
+      skills: ["Machine Learning", "Data Analysis", "Image Processing", "Probabilities & Statistics", "Scikit-Learn", "Web Scraping", "Playwright"]
+    },
+    {
+      title: "🌐 Web Development",
+      skills: ["React JS", "JavaScript (ES6+)", "Node.js",  "Tailwind CSS", "Framer Motion", "HTML5 & CSS3", "FastAPI", "RESTful APIs", "Git & GitHub", "Vercel"]
+    },
+    {
+      title: "⚙️ Hardware & Design",
+      skills: ["Embedded Systems", "Arduino (Microcontrollers)", "Hardware Prototyping", "Sensors & Motors Integration", "3D Printing", "UI/UX Design", "Adobe Illustrator", "Graphic Design"]
+    }
   ];
 
   const projects = [
@@ -98,7 +99,7 @@ const Hero = () => {
         </motion.div>
       </section>
 
-      {/* ================= ABOUT SECTION (Now Value-Driven) ================= */}
+      {/* ================= ABOUT SECTION ================= */}
       <section id="about" className="py-20 px-4 max-w-4xl mx-auto scroll-mt-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -117,26 +118,39 @@ const Hero = () => {
         </motion.div>
       </section>
 
-      {/* ================= SKILLS SECTION ================= */}
+      {/* ================= SKILLS SECTION (Categorized UI) ================= */}
       <section id="skills" className="py-20 px-4 max-w-6xl mx-auto scroll-mt-24">
         <h2 className="text-3xl font-bold mb-10 text-center">Tools I Use to <span className="text-blue-500">Build Your Solutions</span></h2>
-        <div className="flex flex-wrap justify-center gap-4">
-          {skills.map((skill, index) => (
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-gray-800 border border-gray-700 rounded-full px-6 py-3 text-sm font-semibold hover:border-blue-500 hover:text-blue-400 cursor-pointer transition-all shadow-sm hover:shadow-blue-500/20"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-colors shadow-lg"
             >
-              {skill}
+              <h3 className="text-xl font-bold text-gray-100 mb-6 border-b border-gray-700 pb-3">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-gray-900 border border-gray-600 rounded-full px-4 py-2 text-sm font-medium text-gray-300 hover:text-blue-400 hover:border-blue-500 transition-all cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
       </section>
 
       {/* ================= PROJECTS SECTION ================= */}
-      <section id="projects" className="py-20 px-4 bg-gray-800/50 scroll-mt-24">
+      <section id="projects" className="py-20 px-4 bg-gray-800/50 scroll-mt-24 mt-20">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-10 text-center">Solutions & <span className="text-purple-500">Proven Results</span></h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
