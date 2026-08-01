@@ -3,10 +3,19 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   const skills = [
-    "React JS", "Tailwind CSS", "Framer Motion", "Python", 
-    "FastAPI", "Playwright", "Scikit-Learn", "C", 
-    "Algorithms", "Machine Learning", "Web Scraping", 
-    "Graphic Design", "UI/UX", "3D Printing"
+    // Core Computer Science & Languages
+    "Python", "C", "Algorithms", "Object-Oriented Programming (OOP)", 
+    "Operating Systems", "Databases", "Data Networks",
+    
+    // Data Science, AI & Math
+    "Machine Learning", "Data Analysis", "Image Processing", 
+    "Probabilities & Statistics", "Scikit-Learn", "Web Scraping", "Playwright",
+    
+    // Web Development
+    "React JS", "Tailwind CSS", "Framer Motion", "FastAPI",
+    
+    // Design & Hardware
+    "UI/UX Design", "Adobe Illustrator", "Graphic Design", "3D Printing"
   ];
 
   const projects = [
