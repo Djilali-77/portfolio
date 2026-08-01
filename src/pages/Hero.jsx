@@ -14,8 +14,10 @@ const Hero = () => {
     // Web Development
     "React JS", "Tailwind CSS", "Framer Motion", "FastAPI",
     
-    // Design & Hardware
-    "UI/UX Design", "Adobe Illustrator", "Graphic Design", "3D Printing"
+    // Hardware, Embedded Systems & Design
+    "Embedded Systems", "Arduino (Microcontrollers)", "Hardware Prototyping", 
+    "Sensors & Motors Integration", "3D Printing", 
+    "UI/UX Design", "Adobe Illustrator", "Graphic Design"
   ];
 
   const projects = [
