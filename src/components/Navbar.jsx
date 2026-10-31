@@ -1,26 +1,60 @@
-import { Link } from 'react-router-dom';
+// src/components/Navbar.jsx
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { navLinks } from '../data/portfolio';
 
 const Navbar = () => {
+  // Controls the mobile menu (open or closed)
+  const [open, setOpen] = useState(false);
+
   return (
-    <nav className="fixed w-full top-0 bg-[#0f172a]/90 backdrop-blur-sm border-b border-[#0a1f44] z-50">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#0f172a]/80 backdrop-blur border-b border-gray-800">
+      <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" onClick={() => window.scrollTo(0,0)} className="text-xl font-bold text-white tracking-widest">
-          PORT<span className="text-[#cd7f32]">FOLIO.</span>
-        </Link>
-        
-        {/* Les liens */}
-        <div className="hidden md:flex space-x-10 text-lg">
-          <a href="#about" className="text-gray-300 hover:text-[#cd7f32] transition-colors">About</a>
-          <a href="#skills" className="text-gray-300 hover:text-[#cd7f32] transition-colors">Skills</a>
-          <a href="#projects" className="text-gray-300 hover:text-[#cd7f32] transition-colors">Projets</a>
+        <a href="/" className="text-xl font-extrabold tracking-widest text-white">
+          DJILLALI<span className="text-[#cd7f32]">.</span>
+        </a>
+
+        {/* Desktop links (hidden on small screens) */}
+        <div className="hidden md:flex gap-8 text-gray-300">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} className="hover:text-[#cd7f32] transition-colors">
+              {link.label}
+            </a>
+          ))}
         </div>
-        
-        {/* Bouton Contact */}
-        <a href="#contact" className="bg-[#cd7f32] hover:bg-[#b8702c] text-white px-5 py-2 rounded-full font-medium transition-all shadow-lg shadow-[#cd7f32]/20">
+
+        {/* Desktop contact button */}
+        <a
+          href="#contact"
+          className="hidden md:block bg-[#cd7f32] hover:bg-[#b8702c] text-white font-bold py-2 px-6 rounded-full transition-all"
+        >
           Contact
         </a>
+
+        {/* Mobile menu button (hidden on large screens) */}
+        <button
+          className="md:hidden text-2xl text-gray-200"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          {open ? <FaTimes /> : <FaBars />}
+        </button>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {open && (
+        <div className="md:hidden flex flex-col gap-4 px-4 pb-6 text-gray-300 bg-[#0f172a]">
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              {link.label}
+            </a>
+          ))}
+          <a href="#contact" onClick={() => setOpen(false)} className="text-[#cd7f32] font-bold">
+            Contact
+          </a>
+        </div>
+      )}
     </nav>
   );
 };
