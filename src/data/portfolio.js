@@ -54,6 +54,21 @@ export const featuredProjects = [
     github: "https://github.com/Djilali-77/car-market-pipeline",
     demo: null, // no live demo yet
   },
+    {
+    id: "bannerhound",
+    title: "BannerHound Network Scanner",
+    category: "Networking & Security",
+    summary:
+      "A concurrent network auditing tool that scans hosts and ports, grabs service banners and fingerprints the operating system, with live results in a web interface.",
+    highlights: [
+      "Concurrent scanning, with results streamed in real time over SSE",
+      "Banner grabbing and OS fingerprinting to identify what runs on each host",
+      "CSV export of the findings, packaged with Docker Compose",
+    ],
+    stack: ["Python", "FastAPI", "React", "SSE", "Docker"],
+    github: "https://github.com/Djilali-77/BannerHound",
+    demo: null, // no live demo for now
+  },
 ];
 
 // Smaller cards: other projects
@@ -67,13 +82,14 @@ export const otherProjects = [
     github: "https://github.com/Djilali-77/Enterprise-RAG-Assistant",
   },
   {
-    id: "bannerhound",
-    title: "BannerHound Network Scanner",
-    category: "Networking & Backend",
+    id: "ai_diagnostic",
+    title: "Retina AI Diagnostic System",
+    category: "Deep Learning & ResNet18",
     summary:
-      "A concurrent network auditing tool built with Python, SSE and React for real-time OS fingerprinting.",
-    github: "https://github.com/Djilali-77/BannerHound",
+      "An advanced AI application that detects Diabetic Retinopathy from retinal scans.",
+    github: "https://github.com/Djilali-77/Blindness-Detection",
   },
+
 ];
 
 // ---------- Navigation links (used by the Navbar) ----------
