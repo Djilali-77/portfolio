@@ -13,16 +13,11 @@ const Projects = () => {
 
         {/* Big cards: the two main projects */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <motion.article
               key={project.id}
               whileHover={{ y: -5 }}
-              className={`bg-[#0f172a] border border-gray-700 rounded-xl p-6 hover:shadow-xl hover:shadow-[#cd7f32]/10 hover:border-[#cd7f32]/50 transition-all flex flex-col justify-between ${
-                // if the number of cards is odd, the last one gets the whole row
-                index === featuredProjects.length - 1 && featuredProjects.length % 2 === 1
-                  ? 'lg:col-span-2'
-                  : ''
-              }`}
+              className={`bg-[#0f172a] border border-gray-700 rounded-xl p-6 hover:shadow-xl hover:shadow-[#cd7f32]/10 hover:border-[#cd7f32]/50 transition-all flex flex-col justify-between`}
             >
               <div>
                 <span className="text-xs font-bold text-[#cd7f32] bg-[#cd7f32]/10 px-3 py-1 rounded-full border border-[#cd7f32]/20">
