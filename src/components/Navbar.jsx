@@ -16,7 +16,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop links (hidden on small screens) */}
-        <div className="hidden md:flex gap-8 text-gray-300">
+        <div className="hidden md:flex gap-24 text-gray-300 text-lg tracking-widest">
           {navLinks.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-[#cd7f32] transition-colors">
               {link.label}
