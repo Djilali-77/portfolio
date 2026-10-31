@@ -1,0 +1,13 @@
+# Dependencies (npm install brings them back)
+node_modules
+
+# Build output
+dist
+
+# Local secrets and logs
+.env
+.env.local
+*.log
+
+# macOS junk
+.DS_Store
