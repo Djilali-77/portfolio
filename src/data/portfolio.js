@@ -17,78 +17,74 @@ export const profile = {
 // Small numbers shown under the hero text
 // Each label names its project so visitors know where the number comes from
 export const stats = [
-  { value: "0.939", label: "ROC AUC · AI-Powered IDS" },
-  { value: "1.6%", label: "False alarm rate · AI-Powered IDS" },
-  { value: "2", label: "End-to-end ML systems · IDS & DzAuto-Radar" },
+  // { value: "0.939", label: "ROC AUC · AI-Powered IDS" },
+  // { value: "1.6%", label: "False alarm rate · AI-Powered IDS" },
+  // { value: "2", label: "End-to-end ML systems · IDS & DzAuto-Radar" },
 ];
 
 // Big cards: the two strongest projects
 export const featuredProjects = [
   {
-    id: "ids",
-    title: "AI-Powered Intrusion Detection System",
-    category: "Deep Learning & Security",
+    id: "1",
+    title: "Zero-Day Network Anomaly Detection System",
+    category: "Machine Learning & Security",
     summary:
-      "An autoencoder trained on normal traffic to flag anomalies in network flows, compared against a classical baseline and served through a live dashboard.",
+      "An End-to-End, Full-Stack MLOps project that leverages Unsupervised Machine Learning (Isolation Forest) to detect Zero-Day network threats and anomalous traffic.",
     highlights: [
-      "ROC AUC 0.939 vs 0.861 for the Isolation Forest baseline",
-      "Precision 0.890 with a 1.6% false positive rate",
-      "Started as a study during an immersion internship at Algérie Télécom",
+      
     ],
-    stack: ["PyTorch", "FastAPI", "React", "Docker", "CICIDS2017"],
-    github: "https://github.com/Djilali-77/AI-Powered-IDS",
-    demo: "https://ai-powered-ids.vercel.app",
+    stack: ["Scikit-learn", "FastAPI", "React", "Docker", "NSL-KDD", "Isolation Forest"],
+    github: "https://github.com/Djilali-77/zero-day-threat-scanner",
+    demo: null,
   },
   {
-    id: "dzauto",
-    title: "DzAuto-Radar",
-    category: "Data Engineering & ML",
+    id: "2",
+    title: "Network Intrusion Detection System (IDS) & Attack Profiling",
+    category: "Machine Learning & Security",
     summary:
-      "A dockerized pipeline for the Algerian car market: it scrapes Ouedkniss, cleans the data, spots good deals and predicts fair prices.",
+      "An advanced, modular Machine Learning pipeline designed to classify and profile network traffic using the CICIDS2017 dataset.",
     highlights: [
-      "Isolation Forest to detect underpriced listings",
-      "Random Forest model for price prediction",
-      "FastAPI backend with a React dashboard, run with Docker Compose",
+      
     ],
-    stack: ["Python", "Playwright", "scikit-learn", "FastAPI", "React", "Docker"],
+    stack: ["Scikit-learn", "FastAPI", "React", "Docker", "CICIDS2017", "XGBoost", "Random Forest"],
     github: "https://github.com/Djilali-77/car-market-pipeline",
-    demo: null, // no live demo yet
+    demo: null,
   },
-    {
-    id: "bannerhound",
-    title: "BannerHound Network Scanner",
-    category: "Networking & Security",
-    summary:
-      "A concurrent network auditing tool that scans hosts and ports, grabs service banners and fingerprints the operating system, with live results in a web interface.",
-    highlights: [
-      "Concurrent scanning, with results streamed in real time over SSE",
-      "Banner grabbing and OS fingerprinting to identify what runs on each host",
-      "CSV export of the findings, packaged with Docker Compose",
-    ],
-    stack: ["Python", "FastAPI", "React", "SSE", "Docker"],
-    github: "https://github.com/Djilali-77/BannerHound",
-    demo: null, // no live demo for now
-  },
+  // {
+  //   id: "bannerhound",
+  //   title: "BannerHound Network Scanner",
+  //   category: "Networking & Security",
+  //   summary:
+  //     "A concurrent network auditing tool that scans hosts and ports, grabs service banners and fingerprints the operating system, with live results in a web interface.",
+  //   highlights: [
+  //     "Concurrent scanning, with results streamed in real time over SSE",
+  //     "Banner grabbing and OS fingerprinting to identify what runs on each host",
+  //     "CSV export of the findings, packaged with Docker Compose",
+  //   ],
+  //   stack: ["Python", "FastAPI", "React", "SSE", "Docker"],
+  //   github: "https://github.com/Djilali-77/BannerHound",
+  //   demo: null, // no live demo for now
+  // },
 ];
 
 // Smaller cards: other projects
 export const otherProjects = [
-  {
-    id: "rag",
-    title: "Enterprise RAG Assistant",
-    category: "GenAI & Full-Stack",
-    summary:
-      "A Q&A system using LangChain, ChromaDB and FastAPI to extract precise answers from custom PDFs via LLMs.",
-    github: "https://github.com/Djilali-77/Enterprise-RAG-Assistant",
-  },
-  {
-    id: "ai_diagnostic",
-    title: "Retina AI Diagnostic System",
-    category: "Deep Learning & ResNet18",
-    summary:
-      "An advanced AI application that detects Diabetic Retinopathy from retinal scans.",
-    github: "https://github.com/Djilali-77/Blindness-Detection",
-  },
+  // {
+  //   id: "rag",
+  //   title: "Enterprise RAG Assistant",
+  //   category: "GenAI & Full-Stack",
+  //   summary:
+  //     "A Q&A system using LangChain, ChromaDB and FastAPI to extract precise answers from custom PDFs via LLMs.",
+  //   github: "https://github.com/Djilali-77/Enterprise-RAG-Assistant",
+  // },
+  // {
+  //   id: "ai_diagnostic",
+  //   title: "Retina AI Diagnostic System",
+  //   category: "Deep Learning & ResNet18",
+  //   summary:
+  //     "An advanced AI application that detects Diabetic Retinopathy from retinal scans.",
+  //   github: "https://github.com/Djilali-77/Blindness-Detection",
+  // },
 
 ];
 
@@ -107,21 +103,21 @@ export const about = {
     "From detecting network intrusions with autoencoders to optimizing energy grids with Reinforcement Learning, I'm drawn to problems where a model has to prove itself on real data.",
   ],
   principles: [
-    {
-      icon: "📏",
-      title: "Measure, don't guess",
-      text: "Every model is compared against a baseline. My IDS autoencoder reaches 0.939 ROC AUC against 0.861 for Isolation Forest.",
-    },
-    {
-      icon: "🚢",
-      title: "Ship it",
-      text: "A model in a notebook helps nobody. I deploy mine behind an API with a dashboard, like the live IDS demo.",
-    },
-    {
-      icon: "🔁",
-      title: "Make it reproducible",
-      text: "Docker Compose and CI so anyone can run my projects with a single command and get the same results.",
-    },
+    // {
+    //   icon: "📏",
+    //   title: "Measure, don't guess",
+    //   text: "Every model is compared against a baseline. My IDS autoencoder reaches 0.939 ROC AUC against 0.861 for Isolation Forest.",
+    // },
+    // {
+    //   icon: "🚢",
+    //   title: "Ship it",
+    //   text: "A model in a notebook helps nobody. I deploy mine behind an API with a dashboard, like the live IDS demo.",
+    // },
+    // {
+    //   icon: "🔁",
+    //   title: "Make it reproducible",
+    //   text: "Docker Compose and CI so anyone can run my projects with a single command and get the same results.",
+    // },
   ],
 };
 
