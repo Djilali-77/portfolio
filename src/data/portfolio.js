@@ -47,7 +47,7 @@ export const featuredProjects = [
       
     ],
     stack: ["Scikit-learn", "FastAPI", "React", "Docker", "CICIDS2017", "XGBoost", "Random Forest"],
-    github: "https://github.com/Djilali-77/car-market-pipeline",
+    github: "https://github.com/Djilali-77/attack_classification",
     demo: null,
   },
   // {
