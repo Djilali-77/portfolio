@@ -15,17 +15,29 @@ export const profile = {
 };
 
 // Small numbers shown under the hero text
-// Each label names its project so visitors know where the number comes from
-export const stats = [
-  // { value: "0.939", label: "ROC AUC · AI-Powered IDS" },
-  // { value: "1.6%", label: "False alarm rate · AI-Powered IDS" },
-  // { value: "2", label: "End-to-end ML systems · IDS & DzAuto-Radar" },
-];
+// export const stats = [
+//   { value: "3", label: "End-to-End ML Systems Built & Deployed" },
+//   { value: "99.8%", label: "Accuracy · XGBoost IDS" },
+//   { value: "100%", label: "Containerized (Docker) Workflows" },
+// ];
 
-// Big cards: the two strongest projects
+// Big cards: the strongest projects
 export const featuredProjects = [
   {
     id: "1",
+    title: "Network Intrusion Detection System (IDS) & Attack Profiling",
+    category: "Machine Learning & Security",
+    summary:
+      "An advanced, supervised modular Machine Learning pipeline designed to classify and profile network traffic using the CICIDS2017 dataset.",
+    highlights: [
+      
+    ],
+    stack: ["Scikit-learn", "FastAPI", "React", "Docker", "CICIDS2017", "XGBoost", "Random Forest"],
+    github: "https://github.com/Djilali-77/attack_classification",
+    demo: null,
+  },
+  {
+    id: "2",
     title: "Zero-Day Network Anomaly Detection System",
     category: "Machine Learning & Security",
     summary:
@@ -38,33 +50,20 @@ export const featuredProjects = [
     demo: null,
   },
   {
-    id: "2",
-    title: "Network Intrusion Detection System (IDS) & Attack Profiling",
-    category: "Machine Learning & Security",
+    id: "3",
+    title: "DeepAnomaly: PyTorch Autoencoder IDS",
+    category: "Deep Learning & Security",
     summary:
-      "An advanced, modular Machine Learning pipeline designed to classify and profile network traffic using the CICIDS2017 dataset.",
+      "A full-stack network intrusion detection system Self-Supervised Learning powered by a custom PyTorch Autoencoder.",
     highlights: [
-      
+      // "Designed and trained a PyTorch Autoencoder on the UNSW-NB15 dataset to detect anomalous network traffic via MSE reconstruction loss.",
+      // "Engineered a dynamic zero-padding FastAPI inference pipeline to handle real-time partial inputs without crashing the scaler.",
+      // "Built and containerized (Docker Compose) a modern React/Tailwind dashboard for live threat monitoring and simulation."
     ],
-    stack: ["Scikit-learn", "FastAPI", "React", "Docker", "CICIDS2017", "XGBoost", "Random Forest"],
-    github: "https://github.com/Djilali-77/attack_classification",
+    stack: ["PyTorch", "FastAPI", "React", "TailwindCSS", "Docker", "UNSW-NB15"],
+    github: "https://github.com/Djilali-77/l2-DeepAnomaly-PyTorch-Autoencoder",
     demo: null,
   },
-  // {
-  //   id: "bannerhound",
-  //   title: "BannerHound Network Scanner",
-  //   category: "Networking & Security",
-  //   summary:
-  //     "A concurrent network auditing tool that scans hosts and ports, grabs service banners and fingerprints the operating system, with live results in a web interface.",
-  //   highlights: [
-  //     "Concurrent scanning, with results streamed in real time over SSE",
-  //     "Banner grabbing and OS fingerprinting to identify what runs on each host",
-  //     "CSV export of the findings, packaged with Docker Compose",
-  //   ],
-  //   stack: ["Python", "FastAPI", "React", "SSE", "Docker"],
-  //   github: "https://github.com/Djilali-77/BannerHound",
-  //   demo: null, // no live demo for now
-  // },
 ];
 
 // Smaller cards: other projects
@@ -77,15 +76,6 @@ export const otherProjects = [
   //     "A Q&A system using LangChain, ChromaDB and FastAPI to extract precise answers from custom PDFs via LLMs.",
   //   github: "https://github.com/Djilali-77/Enterprise-RAG-Assistant",
   // },
-  // {
-  //   id: "ai_diagnostic",
-  //   title: "Retina AI Diagnostic System",
-  //   category: "Deep Learning & ResNet18",
-  //   summary:
-  //     "An advanced AI application that detects Diabetic Retinopathy from retinal scans.",
-  //   github: "https://github.com/Djilali-77/Blindness-Detection",
-  // },
-
 ];
 
 // ---------- Navigation links (used by the Navbar) ----------
@@ -103,21 +93,21 @@ export const about = {
     "From detecting network intrusions with autoencoders to optimizing energy grids with Reinforcement Learning, I'm drawn to problems where a model has to prove itself on real data.",
   ],
   principles: [
-    // {
-    //   icon: "📏",
-    //   title: "Measure, don't guess",
-    //   text: "Every model is compared against a baseline. My IDS autoencoder reaches 0.939 ROC AUC against 0.861 for Isolation Forest.",
-    // },
-    // {
-    //   icon: "🚢",
-    //   title: "Ship it",
-    //   text: "A model in a notebook helps nobody. I deploy mine behind an API with a dashboard, like the live IDS demo.",
-    // },
-    // {
-    //   icon: "🔁",
-    //   title: "Make it reproducible",
-    //   text: "Docker Compose and CI so anyone can run my projects with a single command and get the same results.",
-    // },
+    {
+      icon: "📏",
+      title: "Measure, don't guess",
+      text: "Every model is evaluated rigorously. Whether it's tuning the MSE threshold of an Autoencoder or handling severe dataset imbalances, I rely on metrics to drive decisions.",
+    },
+    {
+      icon: "🚢",
+      title: "Ship it",
+      text: "A model in a notebook helps nobody. I deploy my AI engines behind FastAPI backends and connect them to modern React dashboards for real-world interaction.",
+    },
+    {
+      icon: "🔁",
+      title: "Make it reproducible",
+      text: "I package my entire stack (Frontend + Backend) using Docker and Docker Compose so anyone can run my systems with a single command.",
+    },
   ],
 };
 
@@ -129,7 +119,7 @@ export const skillCategories = [
   },
   {
     title: "🤖 Data & AI",
-    skills: ["Deep Learning (PyTorch)", "Autoencoders", "Anomaly Detection", "Machine Learning", "Scikit-Learn", "Reinforcement Learning", "Computer Vision"],
+    skills: ["Deep Learning (PyTorch)", "Autoencoders", "Anomaly Detection", "Machine Learning", "Scikit-Learn", /*"Reinforcement Learning"*/],
   },
   {
     title: "🌐 Full-Stack",
@@ -137,6 +127,6 @@ export const skillCategories = [
   },
   {
     title: "⚙️ MLOps & Infrastructure",
-    skills: ["Docker & Compose", "GitHub Actions (CI)", "Vercel / Render", "LangChain", "ChromaDB", "Weights & Biases", "Network Automation (Netmiko)"],
+    skills: ["Docker & Compose", "Vercel / Render", "LangChain", "ChromaDB", "Weights & Biases", "Network Automation (Netmiko)"],
   },
 ];
